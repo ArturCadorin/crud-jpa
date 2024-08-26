@@ -9,6 +9,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/*
+ * Entidade User, já com as anotações do Spring JPA
+ * 
+ * */
 
 @Entity
 @Table(name="tb_user")
@@ -28,9 +32,8 @@ public class User implements Serializable{
 	public User() {
 		}
 
-	public User(long id, String name, String email, String phone, String password) {
+	public User(String name, String email, String phone, String password) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
